@@ -1,0 +1,37 @@
+/**
+* Copyright 2013 Dell Inc.
+* ALL RIGHTS RESERVED.
+*
+* This software is the confidential and proprietary information of
+* Dell Inc. ("Confidential Information").  You shall not
+* disclose such Confidential Information and shall use it only in
+* accordance with the terms of the license agreement you entered
+* into with Dell Inc.
+*
+* DELL INC. MAKES NO REPRESENTATIONS OR WARRANTIES
+* ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+*  PARTICULAR PURPOSE, OR NON-INFRINGEMENT. DELL SHALL
+* NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE
+* AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
+* THIS SOFTWARE OR ITS DERIVATIVES.
+**/
+
+/* background */
+.bg-grid{background:url(../img/bg/bg_grid.png?version=131);}
+
+.wrapper{overflow:hidden;}
+.content{padding-bottom: 3000px;margin-bottom: -3000px;}
+.content-container{padding-top:40px;}
+
+.boards{width:940px;}
+.boards>li{padding-bottom: 110px;background:url(../img/awards/board.png?version=131) bottom left no-repeat;}
+.awards>li{float:left;width:470px;text-align: center;}
+
+.awards>li>p{height: 100px;width: 324px;margin: 30px auto;font-size: 15px;text-align: left;}
+.awards>li>p .hightlight{background:#FCEFCC;font-weight:bold;}
+.awards>li>p.more{text-align:right;height: 30px;padding-right: 40px;}
+
+
+

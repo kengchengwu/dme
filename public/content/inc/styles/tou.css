@@ -1,0 +1,191 @@
+/**
+* Copyright 2013 Dell Inc.
+* ALL RIGHTS RESERVED.
+*
+* This software is the confidential and proprietary information of
+* Dell Inc. ("Confidential Information").  You shall not
+* disclose such Confidential Information and shall use it only in
+* accordance with the terms of the license agreement you entered
+* into with Dell Inc.
+*
+* DELL INC. MAKES NO REPRESENTATIONS OR WARRANTIES
+* ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+*  PARTICULAR PURPOSE, OR NON-INFRINGEMENT. DELL SHALL
+* NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE
+* AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
+* THIS SOFTWARE OR ITS DERIVATIVES.
+**/
+
+
+/* This style covers 
+	1. license layout setting
+	2. subscription flow setting
+	3. contact us
+*/
+
+.content-container{padding:30px 0 60px 0;}
+
+.subscription-container{margin:20px auto 40px auto;width: 980px;min-height:600px;}
+.hr1{margin: 1em 0;width: 100%;border: none;border-top: 1px solid #E0E5DB;height: 1px;}
+.sectionHeader { font-size: 15px; font-weight: bold; line-height: 30px; padding: 0 8px; text-align: left; }
+.sectionActionLink { display: inline-block; width: 16px; height: 30px; margin-left: 12px; text-indent: -9999px; background: url(../img/icon-modify.png) no-repeat left center; }
+.disabledBtn { background: #dcdcdc; border: none; color: #777;border: none;height: 34px; font-size: 15px;padding: 4px 15px;}
+.disabledBtn:hover { text-decoration: none; }
+.subscription-container .mr10{margin-right: 10px;font-size: 15px;line-height:34px;}
+.loading { text-align: center; }
+	.loading .tips { margin-top: 1.5em; color: #999; padding: 0; background: none; }
+/*  1. license layout setting */
+p { font-size: 13px; padding-bottom: 10px; margin-bottom: 10px;line-height: 20px; }
+ol.firstLevelList > li { list-style: none; color: #505050; }
+	ol.firstLevelList > li > span { display: inline-block;line-height:26px; font-weight: bold;font-size:14px;margin-top: 15px; margin-bottom: 15px;padding-left:10px; }
+	ol.firstLevelList > li > span{border-left: 3px solid #71c6c1;}
+	ol.firstLevelList > li > p { line-height: 20px; }
+			
+ol.secondLevelList { }
+	ol.secondLevelList > li { list-style: none; }
+	ol.secondLevelList > li > span { font-size: 13px; font-weight: bold; float: left; margin-right: 8px; }
+		ol.secondLevelList > li > span:after { content: ".";}
+	ol.secondLevelList > li > p { }
+	
+/*  1.2 TOU setting 
+	TOU layout is some different from other policy page
+*/
+.touWrapper {font-size:13px;}
+
+	p.touNoti { font-size:12px;font-weight: 700; }
+
+	ol.firstTouList {}
+		ol.firstTouList>li { }
+			ol.firstTouList>li>span { display: inline-block;line-height:26px;font-weight: bold;font-size:14px; margin-top: 5px; margin-bottom: 20px;padding-left:10px; }
+			ol.firstTouList>li>span{border-left: 3px solid #71c6c1;}
+			ol.firstTouList>li>p {line-height: 20px;padding-left: 40px;}
+	
+	ol.secondTouList{ }
+		ol.secondTouList>li{ list-style: outside lower-alpha; margin-left: 20px; padding-left: 20px;  margin-bottom: 3px; padding-bottom: 8px;}
+			ol.secondTouList li>span { font-weight: 700;  }
+
+/* 2. subscribe flow setting  
+	Modified: 2013-01-29
+	2.1. sub steps
+	2.2. instance slider
+	2.3. pay frequency selection
+	2.4. sub action
+*/
+#subSummaryTable { width: 100%; }
+	
+	/* 2.1. sub steps, with slider */
+	.subSteps { margin: 20px 0 26px;}
+	.subSteps li { background: #E4F0F9; color: #5482AB; float: left; width: 221px; padding-left: 24px; height: 40px; line-height: 40px; font-size: 16px; }	
+		.subSteps li.last { width: 221px; }
+		.subSteps li:first-child { }
+		.subSteps li:last-child { width: 221px;}
+		.subSteps li b { display: block; float: right; height: 40px; width: 23px; background: url(../img/bg-sub-steps.png?version=131) no-repeat 0 -40px; }
+		.subSteps .subOrder { display: inline-block; width: 23px; height: 40px; background: url(../img/bg-sub-order.png) no-repeat 50% 53%; text-align: center; margin-right: 0.5em; color: #fff; }
+			
+	.subSteps li.selected { width: 198px;margin-right:23px;background-color: #0085C3; color: #fff; }
+		.subSteps li.selected b { margin-right:-23px;background: url(../img/bg-sub-steps.png?version=131) no-repeat 0 0; }
+		.subSteps li.selected .subOrder { background-image: url(../img/bg-sub-order-highlight.png); color: #444; }
+	.subSteps li.beforeSelected{width: 198px;margin-right:23px;}	
+	.subSteps li.beforeSelected b { margin-right:-23px;background-position: 0 -83px; }
+	.subTitle { color: #444; font-size: 1.3em; margin-bottom: 1.3em; line-height: 28px; overflow: hidden; }
+	
+	.pricing-container{width: 980px; min-height:560px;margin: 20px auto;}
+	#priceSelectWrapper { border: 1px solid #eee; padding: 25px;}
+	.instance-icon{margin: 0 -2px 0 9px;vertical-align: middle;}
+		.vmNumScale, .payFreScale { 
+			float: left; height: 32px;
+			background-image: url(../img/bg-pricing-tier.gif); background-repeat: no-repeat; background-position: 50% bottom;
+			text-align: center;  color: #aaa; font-size:14px; }
+	.pdf-link { background: url(../img/ic_download_blu_16.png?version=131) no-repeat; padding-left: 25px; display: inline-block;margin-top:-50px;font-size:13px;}
+	/* instance slider */
+	#instanceSlider { padding-bottom: 1em; border-bottom: 1px solid #eee; margin-bottom: 2em; }
+		#instanceInputWrapper { float: right; font-size: 14px; font-weight: normal; position: relative; }
+		#instanceInputWrapper input[type='text'] { margin-left: 8px; }
+		#instanceInputWrapper .button { position: absolute; right: 0px; top: 2px; padding: 0px 10px 5px;height:27px;}
+			#instanceInputWrapper .button:hover { text-decoration: none; }
+			#instanceInputWrapper .instance-size-error{ float: right;margin-right:60px;}
+		
+		
+		#vmNumSliderWrapper { margin-bottom: 1em;  }
+			#numSliderWrapper { background: #f4f4f4; height: 5px; padding: 4px 7px; box-shadow: 2px 2px 8px #E7E7E7 inset; margin-bottom: 0.2em; position: relative; top: -10px;}
+				#numStart, #numEnd { float: left; width: 20px; height: 5px; background: #004482;  }
+				#numEnd { display: none; }
+				#num-slider{ float: left; width: 854px;}
+			
+			.vmNumScaleList { width: 854px; margin: 4em auto 0; position: relative; z-index: 10;}	
+				#sliderTip {
+					background: url("../img/img-drag-arrow.gif") no-repeat scroll right center transparent;
+				    color: #B3D9F8;
+				    font-size: 16px;
+				    height: 20px;
+				    left: 45px;
+				    line-height: 20px;
+				    position: absolute;
+				    top: -38px;
+				    width: 67px;
+				}
+				.vmNumScale { width: 95px; }
+				.vmNumScale.start { width: 47px; background-position: 0% bottom; text-align: left; }
+				.vmNumScale.end { width: 47px; background-position: 100% bottom; text-align: right; }
+				.vmNumScale.selected { visibility: hidden; }
+					.vmNumScale.selected span { color: #444; font-weight: bold; }
+			p.instruction { font-size: 12px; }
+	
+	/*  payment selection */
+	#payFreList { overflow: hidden;width: 913px; }
+		#payFreList li { float: left; border-right: 1px solid #BDD7F8; height: 117px; width: 150px; background: #E4F1F9; position: relative; cursor: pointer; }
+		#payFreList li:last-child { border-right: none;}
+			#payFreList li > span { display: block; height: 32px; width: 100px; line-height: 32px; text-align: center; margin: 22px auto 10px;  color: #164F84; font-size: 17px; }
+			#payFreList li > div { text-align: center; color: #617BAE; line-height: 18px; font-size: 13px; }
+			
+		#payFreList li.selected { background: #0085C3;color:#fff;}
+			#payFreList li.selected > span { color:#fff;}
+			#payFreList li.selected > div { color: #fff; }
+		#payFreList li:hover { background: #4CA9D5;color:#fff;}
+			#payFreList li:hover > span, #payFreList li:hover > div { color: #fff; }
+			#payFreList li.selected:hover > span {color:#fff;; }
+	
+	.paymentMethod { width: 955px; background: #E4F0F9; padding: 10px; margin-bottom: 10px; }
+		.paymentMethod input { vertical-align: -2px; }
+		.paymentMethod label { font-size: 14px; margin-right: 20px; padding-left: 2px;  }
+	
+	/* sub action */			
+	#subActionWrapper { background: #E4F1F9; float: right; padding: 15px; margin-top: 26px;} 
+		#selectionWrapper { height: 50px; float: left; text-align: center; }
+			#selectionWrapper #totalAmount { height: 50px; color: #003E82; font-size: 47px; line-height: 43px; line-height: 27px\0/; padding: 0 30px; }
+				#selectionWrapper #totalAmount sup { font-size: 14px; font-weight: normal; }
+				#selectionWrapper #pricePerMonth { color: #444; margin-top: 4px; }
+			#subActionWrapper .button { 
+				width: 155px; height: 50px; margin-left: 15px;
+				color: #fff; font-size: 16px; font-weight: bold;
+			}		
+				
+	/* subscriber & billing input table */
+	.successWrapper { background: url(../img/icon-confirm.png) no-repeat 17px center; margin-top: 20px; padding-left: 115px; min-height: 100px; }
+	.move-top{margin-bottom: 0;}
+	.sectionSubHeader{font-size: 13px;font-weight: bold;line-height: 30px;padding: 0 8px;text-align: left;}
+	.sign-up-table input.short { width: 240px;margin-right:6px;}
+	.sign-up-table input.long { width: 509px; }
+	.sign-up-table input.city-input{width:176px;}
+	.sold-to{float: left; margin: 6px 0 0 105px;}
+/* 3. contact us setting */
+.contactNav li{float: left; height: 30px; line-height:30px; border: 1px solid #ccc; padding: 10px; margin-right: 10px; }
+	.contactNav li a{text-decoration: none; font-size: 14px; font-weight: bold;}
+.tabItem {padding: 10px;}
+	.tabItem p{font-size: 14px; line-height: 20px; margin-bottom: 20px;}
+		.tabItem p.instruction {margin-bottom: 10px;}
+		
+	.tabItem dl { margin-bottom: 20px; }
+	.tabItem dl dt { font-size: 14px; line-height: 28px; }
+	.tabItem dl dd { padding-left: 30px; font-size: 14px; background: url(../img/fod-global.png?version=130) no-repeat -486px -43px; line-height: 20px; margin: 4px 0;  }
+	
+	.timeRangeAction{ display: inline-block; line-height: 30px;}
+	.timeRangeAction a{ display: inline-block;}
+		.timeRangeAction a.time-delete, .timeRangeAction a.time-add { background-image: url(../img/fod-global.png); background-repeat: no-repeat; width: 13px; height: 13px; }
+		.timeRangeAction a.time-delete{background-position: -250px -300px;}
+		.timeRangeAction a.time-delete:hover{background-position: -250px -350px;}
+		.timeRangeAction a.time-add{background-position: -250px -200px;}
+		.timeRangeAction a.time-add:hover{background-position: -250px -250px;}
+	

@@ -1,0 +1,52 @@
+
+/**********************************************************
+					ccm-solution.css
+***********************************************************/
+/**
+* Copyright 2013 Dell Inc.
+* ALL RIGHTS RESERVED.
+*
+* This software is the confidential and proprietary information of
+* Dell Inc. ("Confidential Information").  You shall not
+* disclose such Confidential Information and shall use it only in
+* accordance with the terms of the license agreement you entered
+* into with Dell Inc.
+*
+* DELL INC. MAKES NO REPRESENTATIONS OR WARRANTIES
+* ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+*  PARTICULAR PURPOSE, OR NON-INFRINGEMENT. DELL SHALL
+* NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE
+* AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
+* THIS SOFTWARE OR ITS DERIVATIVES.
+**/
+
+
+#scenario-tabs li {margin-left: 90px !important;}
+#scenario-tabs li:first-child{margin-left:130px !important;}
+
+/* ccm-budget-advisories-scenario */
+
+/* feature */
+#ccm-budget-advisories-scenario .stage-2 .feature{top: -151px;left: 100px;width: 571px;}
+#ccm-budget-advisories-scenario .stage-3 .feature{top: 0px;left: 100px;width: 319px;}
+#ccm-budget-advisories-scenario .stage-4 .feature{top: 25px;left: 400px;width: 470px;}
+
+/* ccm-cost-control-scenario */
+
+/* feature */
+#ccm-cost-control-scenario .stage-2 .feature{top: 10px;left: 50px;width: 315px;}
+#ccm-cost-control-scenario .stage-3 .feature1{top: 38px;left: 600px;width: 319px;}
+#ccm-cost-control-scenario .stage-3 .feature2{top: 338px;left: 50px;width: 400px;}
+#ccm-cost-control-scenario .stage-4 .feature{top: 144px;left: 561px;width: 372px;}
+#ccm-cost-control-scenario .stage-5 .feature{top: 69px;left: 50px;width: 535px;}
+
+
+/* ccm-cost-control-scenario */
+
+/* feature */
+#ccm-reporting-scenario .stage-2 .feature{top: -150px;left: 100px;width: 550px;}
+#ccm-reporting-scenario .stage-3 .feature{top: -134px;left: 192px;width: 550px;}
+
+#ccm-reporting-scenario .stage-2 .faq{position: absolute;top: 0px;left: 31px;height: 243px;width: 920px;overflow: hidden;}

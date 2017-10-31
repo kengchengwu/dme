@@ -1,0 +1,110 @@
+/**
+* Copyright 2013 Dell Inc.
+* ALL RIGHTS RESERVED.
+*
+* This software is the confidential and proprietary information of
+* Dell Inc. ("Confidential Information").  You shall not
+* disclose such Confidential Information and shall use it only in
+* accordance with the terms of the license agreement you entered
+* into with Dell Inc.
+*
+* DELL INC. MAKES NO REPRESENTATIONS OR WARRANTIES
+* ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+*  PARTICULAR PURPOSE, OR NON-INFRINGEMENT. DELL SHALL
+* NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE
+* AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
+* THIS SOFTWARE OR ITS DERIVATIVES.
+**/
+/******************* override **************************/
+
+.tab-content{padding:30px 0;}
+.content-container{padding:30px 0;}
+
+/******************* text **************************/
+.hight-light{font-weight:bold;color:#0085C3;}
+.warning{color:#F4BB26;}
+
+/******************* list **************************/
+
+h2.second-title{margin-bottom:30px;}
+ul.solutions>li{float:left;margin:0 20px 20px 0;}
+ul.subscriptions>li{margin-bottom:20px;}
+ul.actions>li{float:right;margin-left:20px;}
+
+/******************* icon **************************/
+.invoice a { background:url(../img/ic_invoice_blu_16.png?version=131) no-repeat;padding:0 0 5px 20px;}
+.cancel a { background:url(../img/ic_cancel_16.png?version=131) no-repeat;padding:0 0 5px 20px;}
+.edit a { background:url(../img/ic_amend_blu_16.png?version=131) no-repeat;padding:0 0 5px 20px;}
+.history.up a{background:url(../img/ic_expndr_up_16.png?version=131) no-repeat top right;padding:2px 20px 0 0;}
+.history.down a{background:url(../img/ic_expndr_dwn_16.png?version=131) no-repeat top right;padding:2px 20px 0 0;}
+
+/******************* solution **************************/
+
+.solution{position:relative;width:300px;height:175px;color:#fff;background:grey;}
+.solution a{color:#fff;}
+.solution .opacity-layer{position:absolute;width:100%;height:140px;background: #fff;filter: alpha(opacity=30);-moz-opacity:0.3;opacity: 0.3;}
+.solution .content{position:relative;height:110px;padding:15px;}
+.solution .content h2{font-size:16px;margin-top:15px;}
+.solution .content .edition{position: absolute;top: -7px;left:5px;width: 90px;height:22px;line-height:22px;background: url(../img/bg_tag.png?version=131) no-repeat;text-align: center;}
+.solution .content .action1{font-size:18px;position:absolute;bottom:10px;right:15px;background: url(../img/ic_arrow.png?version=131) no-repeat bottom right;padding-right: 18px;}
+.solution .actions{height:35px;line-height:35px;padding:0 15px;}
+.solution .actions .action2{float:left;}
+.solution .actions .action3{float:right;}
+
+.CAM_Azure_solution {background:#71C6C1 !important;}
+.CCM_Azure_solution {background:#DC5034 !important;}
+.WebMonitor_solution {background:#0085C3 !important;}
+
+/******************** advertising solution *************************/
+
+.advertising-solution{width:300px;padding-top:6px;border:1px solid #C6C6C6;background:grey;}
+.advertising-solution .content{background:#fff;padding:5px 10px;height: 92px;}
+.advertising-solution .content h3{color:#666666; margin-bottom:1px;}
+.advertising-solution .content .description{height:70px;overflow: hidden;}
+.advertising-solution .content .description .bulletList>li{list-style: disc;list-style-position: inside;}
+.advertising-solution .content .actions{margin-top:3px;}
+.advertising-solution .content .actions li{float:left;margin-right:10px;margin-left:0;}
+
+/******************** subscription summary *************************/
+
+table.subscription-summary{width:550px;font-size:14px;}
+table.subscription-summary tr,
+table.subscription-summary td{border:1px solid #C6C6C6;}
+table.subscription-summary td{padding: 15px;background: #F5F5F5;}
+table.subscription-summary label{font-weight:bold;}
+
+/******************** subscription detail *************************/
+.subscription-detail.CAM_Azure h2{border-color:#71C6C1;}
+.subscription-detail.CCM_Azure h2{border-color:#DC5034;}
+.subscription-detail.WebMonitor h2{border-color:#0085C3;}
+
+.subscription-detail h2{border-left: 4px solid;height: 30px;line-height: 30px;font-size:14px;padding-left: 10px;}
+.subscription-detail h2 .edition{color:#0085C3;margin-left:10px;}
+.subscription-detail .description{margin-top:10px;}
+.subscription-detail .warning{margin-top:10px;}
+
+.subscription-detail .subscriptions{position:relative;margin-top:10px;padding-bottom:20px;border-bottom:1px solid #C6C6C6;}
+.subscription-detail .subscriptions.unfold{padding-top:20px;border-top:2px solid #0085C3;border-bottom:2px solid #0085C3;}
+.subscription-detail .subscriptions .history{position: absolute;right: 34px;top: 5px;}
+.subscription-detail .subscriptions.unfold .history{top: 25px;}
+.subscription-detail .subscriptions .unit{color:#999999;}
+.subscription-detail .subscriptions .hight-light{font-size:16px;}
+
+/******************** current subscription *************************/
+
+table.current-subscription{width:100%;}
+table.current-subscription td{padding: 5px 15px;}
+
+/******************** history subscription *************************/
+.history-subscription{display:none;}
+.history-subscription table{width:100%;margin-top:20px;}
+.history-subscription table tr{border-top:1px solid #C6C6C6;border-bottom:1px solid #C6C6C6;}
+.history-subscription table td{padding: 15px;background: #F5F5F5;}
+
+/******************** survey *************************/
+
+.survey{width:300px;height:175px;line-height:175px;background:#F7F6F4;display: block;text-align: center;cursor:pointer;}
+.survey .logo{width: 60px;height: 60px;display: inline-block;position: relative;top: 25px;left: -10px;background: url(../img/ic_survey_60.png?version=131) no-repeat center left;}
+.survey.advertising{height:112px;line-height:112px;}

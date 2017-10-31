@@ -1,0 +1,105 @@
+<img class="closeLayerImg" title="Close" alt="Close" src="../inc/img/icon-close.png?version=130">
+    <h2 class="popTitle">Screen Shots </h2>
+    <div class="popContentWrapper"> <a href="#" class="preSlide">Previous</a> <a href="#" class="nextSlide">Next</a>
+        <div class="viewport">
+            <ul class="slideWrapper">
+                <li class="slide"><img src="../inc/img/screen-ccm-budget-overview.png?version=140" /></li>
+                <li class="slide"><img src="../inc/img/screen-ccm-break-down.png?version=140" /></li>
+                <li class="slide"><img src="../inc/img/screen-ccm-alerts.png?version=140" /></li>
+                <li class="slide"><img src="../inc/img/screen-ccm-billing-history.png?version=140" /></li>
+                <li class="slide"><img src="../inc/img/screen-ccm-account-management.png?version=140" /></li>
+                <li class="slide"><img src="../inc/img/screen-ccm-budget-config.png?version=140" /></li>
+                <li class="slide"><img src="../inc/img/screen-ccm-faqts.png?version=140" /></li>
+            </ul>
+        </div>
+        <div class="slideCaption">
+            <ul class='captionWrapper'>
+                <li class='captionItem'>Insight Into Spending &#8211 Graphically represent spending history, distribution, budget burn rate, and more.</li>
+                <li class="captionItem">Cost Break Down &#8211 From total cost to each subscription, within topology chart.</li>
+                <li class='captionItem'>Alerts &#8211 Set budget for each account to receive online alerts, and email notifications if you overspend.</li>
+                <li class="captionItem">Billing History &#8211 Display all billing history, and provide download for usage detail.</li>
+                <li class='captionItem'>Manage Multiple Accounts &#8211 Use a single console to view information from multiple accounts.</li>
+                <li class='captionItem'>Budget Notifications &#8211 Budget, cost in different levels, thresholds for warnings and email notifications.</li>
+                <li class='captionItem'>FAQts &#8211 Use the related FAQts with quick questions to save time, or for more in&#8211depth information.</li>
+            </ul>
+        </div>
+        <a href="#" class="preNavBatch">Previous Nav Batch</a> <a href="#" class="nextNavBatch">Next Nav Batch</a>
+        <div class="slideNav">
+            <ul class="navWrapper cf">
+                <li class="navItem active"><img src="../inc/img/screen-ccm-budget-overview.png?version=140" /></li>
+                <li class="navItem"><img src="../inc/img/screen-ccm-break-down.png?version=140" /></li>
+                <li class="navItem"><img src="../inc/img/screen-ccm-alerts.png?version=140" /></li>
+                <li class="navItem"><img src="../inc/img/screen-ccm-billing-history.png?version=140" /></li>
+                <li class="navItem"><img src="../inc/img/screen-ccm-account-management.png?version=140" /></li>
+                <li class="navItem"><img src="../inc/img/screen-ccm-budget-config.png?version=140" /></li>
+                <li class="navItem"><img src="../inc/img/screen-ccm-faqts.png?version=140" /></li>
+            </ul>
+        </div>
+    </div>
+<script>
+$(function(){
+	// screen navigation
+	var iScreenStep = 642;
+	var iCaptionStep = 30;
+	var iNavStep = 688;	//nav item width * num within a screen
+	
+	var screenActiveIndex2 = 0;
+	var screenSlideNum2 = $('[name="ccm-screenShot"] .slideWrapper .slide').size();
+	
+	// for CCM
+	function updateSlider2(){
+		//update slide
+		$('[name="ccm-screenShot"] .slideWrapper').stop().animate({'left': iScreenStep*(-1)*screenActiveIndex2});
+		//update nav
+		$('[name="ccm-screenShot"] .slideNav li:eq('+screenActiveIndex2+')').addClass('active').siblings().removeClass('active');
+		var navLoop = Math.floor(screenActiveIndex2 / 5);	         // 5 navs per page
+		var left = navLoop*(-1)*iNavStep;
+		$('[name="ccm-screenShot"] .slideNav .navWrapper').animate({'left': left});
+		navLeft2 = left; 
+		//update desc	
+		$('[name="ccm-screenShot"] .slideCaption .captionWrapper').stop().animate({'top':iCaptionStep*(-1)*screenActiveIndex2});
+	}
+	
+	//nav.click
+	$('[name="ccm-screenShot"] .slideNav .navItem').click(function(e) {
+		var iIndex = $('[name="ccm-screenShot"] .slideNav .navItem').index(this);
+		screenActiveIndex2 = iIndex;
+		updateSlider2();	
+		return false;
+	});
+	//pre.click
+	$('[name="ccm-screenShot"] .preSlide').click(function(e) {
+		if(screenActiveIndex2 <= 0) return false;
+		screenActiveIndex2 = (screenActiveIndex2-1+screenSlideNum2)%screenSlideNum2;
+		updateSlider2();
+		return false;
+	});
+	//next.click
+	$('[name="ccm-screenShot"] .nextSlide').click(function(e) {
+		if(screenActiveIndex2 >= (screenSlideNum2-1)) return false;
+		screenActiveIndex2 = (screenActiveIndex2+1)%screenSlideNum2;
+		updateSlider2();
+		return false;
+	});
+	
+	//pre nav batch click
+	var navLeft2 = 0;
+	$('[name="ccm-screenShot"] .preNavBatch').click(function(e) {
+        //navwrapper left change
+		if(navLeft2 >=0) return false;
+		var left = navLeft2 + iNavStep;
+		$('[name="ccm-screenShot"] .navWrapper').stop().animate({'left': left});
+		navLeft2 = left;
+		return false;
+    });
+	//next nav batch click
+	$('[name="ccm-screenShot"] .nextNavBatch').click(function(e) {
+		var totalNavLength = screenSlideNum2*140;	//140=navItem width + 12 margin
+		if((Math.abs(navLeft2) + iNavStep) > totalNavLength ) return false;
+		var left = (navLeft2 - iNavStep);
+		$('[name="ccm-screenShot"] .navWrapper').stop().animate({'left': left});
+		navLeft2 = left;
+		return false;
+    });
+});
+</script>

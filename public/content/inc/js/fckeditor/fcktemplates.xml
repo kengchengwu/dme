@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2010 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This is the sample templates definitions file. It makes the "templates"
+ * command completely customizable.
+ *
+ * See FCKConfig.TemplatesXmlPath in the configuration file.
+-->
+<Templates imagesBasePath="fck_template/images/">
+	<Template title="Image and Title" image="template1.gif">
+		<Description>One main image with a title and text that surround the image.</Description>
+		<Html>
+			<![CDATA[
+				<img style="MARGIN-RIGHT: 10px" height="100" alt="" width="100" align="left"/>
+				<h3>Type the title here</h3>
+				Type the text here
+			]]>
+		</Html>
+	</Template>
+	<Template title="Strange Template" image="template2.gif">
+		<Description>A template that defines two colums, each one with a title, and some text.</Description>
+		<Html>
+			<![CDATA[
+				<table cellspacing="0" cellpadding="0" width="100%" border="0">
+					<tbody>
+						<tr>
+							<td width="50%">
+							<h3>Title 1</h3>
+							</td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+							<td width="50%">
+							<h3>Title 2</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>Text 1</td>
+							<td>&nbsp;</td>
+							<td>Text 2</td>
+						</tr>
+					</tbody>
+				</table>
+				More text goes here.
+			]]>
+		</Html>
+	</Template>
+	<Template title="Text and Table" image="template3.gif">
+		<Description>A title with some text and a table.</Description>
+		<Html>
+			<![CDATA[
+			
+				<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+* {	padding: 0;	margin: 0; }
+html, body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #404040;
+	background:#F2F7F2;
+}
+a {	text-decoration: underline;	color: #00a8ec; }
+	a:hover { color: #ec6a00; }
+	a img {	border: 0; }
+	
+.mailContentWrapper {
+	border-collapse: collapse;
+	width: 1050px;
+	border: 2px solid #E5EDE3;
+	background: #fff;
+}
+	#logo {	margin:18px; }
+	#mailContent { margin: 20px; }
+		#mailContent p { line-height: 20px;	margin-bottom:20px; }
+		#unsubscribe { color: #777; }
+</style>
+</head>
+<body>
+	<table style="width: 100%;">
+		<tbody><tr>
+			<td align="center">
+				<table class="mailContentWrapper">
+						<tbody><tr>
+							<td style="border-bottom: #1b1f22 1px solid; border-left: #1b1f22 1px solid; background: #1b1f22; border-top: #1b1f22 1px solid; border-right: #1b1f22 1px solid;">
+								<div id="logo"> 
+									<a href="http://www.kenson.com">
+										<img border="0" title="Foglight Logo" alt="Foglight Logo" src="http://www.kenson.com/content/inc/img/logo-foglight.png?version=130">									
+									</a>
+								 </div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div id="mailContent">
+									
+	
+	<p>Welcome null,</p><table id="subTable"><tbody><tr><td>Thanks for registering with the Foglight.<br></td></tr><tr><td>If you need any help or have any questions, please <a href="mailto:null?subject=Question about Foglight">contact us</a> with details.</td></tr></tbody></table> 
+	
+
+								<p id="signature">
+									Thanks! <br> The Foglight Team
+								</p>
+						 </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+<!-- InstanceEnd -->
+									</body></html>
+			]]>
+		</Html>
+	</Template>
+</Templates>

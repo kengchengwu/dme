@@ -1,0 +1,19 @@
+<img class="closeLayerImg" title="Close" alt="Close" src="../inc/img/icon-close.png?version=130">
+    <h2 class="popTitle"> Video </h2>
+    <div class="popContentWrapper">
+        <p>There are no videos for Web Site Availability to display at this time.</p>
+    </div>
+<script>
+$(function(){
+	// video play navigation
+	var iVideoStep = $('.homeVideoPlay img').width();
+	var videoActiveIndex = 0;
+	var videoSlideNum = $('.homeVideoNav li').size();
+	$('.homeVideoNav li').click(function(e) {
+        var iIndex = $('.homeVideoNav li').index(this);
+		$('.homeVideoWrapper').animate({'left': iVideoStep*(-1)*iIndex});
+		videoActiveIndex = iIndex;
+		return false;
+    });
+});
+</script>

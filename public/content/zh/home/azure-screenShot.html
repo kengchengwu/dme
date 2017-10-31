@@ -1,0 +1,112 @@
+<img class="closeLayerImg" title="Close" alt="Close" src="../inc/img/icon-close.png?version=130">
+<h2 class="popTitle">Screen Shots </h2>
+    <div class="popContentWrapper"> <a href="#" class="preSlide">Previous</a> <a href="#" class="nextSlide">Next</a>
+        <div class="viewport">
+            <ul class="slideWrapper">
+                <li class="slide"><img src="../inc/img/screen-azure-overview.png?version=130"  /> </li>
+                <li class="slide"><img src="../inc/img/screen-azure-alarm.png?version=130"  /> </li>
+                <li class="slide"><img src="../inc/img/screen-azure-availability.png?version=130"  /> </li>
+                <li class="slide"><img src="../inc/img/screen-azure-health.png?version=130"  /> </li>
+                <li class="slide"><img src="../inc/img/screen-azure-service.png?version=130" /> </li>
+                <li class="slide"><img src="../inc/img/screen-azure-top-url.png?version=130" /> </li>
+                <li class="slide"><img src="../inc/img/screen-azure-real-user.png?version=130" /> </li>
+                <li class="slide"><img src="../inc/img/screen-azure-synthetic-user.png?version=130" /> </li>
+                <li class="slide"><img src="../inc/img/screen-azure-compare.png?version=130" /> </li>
+            </ul>
+        </div>
+        <div class="slideCaption">
+            <ul class='captionWrapper'>
+                <li class='captionItem'>Monitor &#10132 Overview &#8211 Application availability, response, health and quality of service at a glance</li>
+                <li class='captionItem'>Monitor &#10132 Alerts &#8211 What's affected, how long for, why it is important and what you can do about it </li>
+                <li class='captionItem'>Monitor &#10132 Availability &#8211 Performance assurance with robot users checking availability and response</li>
+                <li class='captionItem'>Monitor &#10132 Application Health &#8211 Vital signs, KPIs and resource consumption for the application components</li>
+                <li class='captionItem'>Monitor &#10132 Services &#8211 Windows Azure Data Center Service notifications and alerts</li>
+                <li class='captionItem'>Monitor &#10132 Top URLs &#8211 Greatest negative impact, slowest, greatest cumulative time, etc</li>
+                <li class='captionItem'>Monitor &#10132 Visitors &#8211 How many, what browsers and devices they use and what load they placed on the application</li>
+                <li class='captionItem'>Monitor &#10132 Overview &#10132 End User (real) &#8211 Where users are coming from and what response they experience</li>
+                <li class='captionItem'>Monitor &#10132 Overview &#10132 End User (synthetic) &#8211 Robotic availability and response tests from multiple locations</li>
+                <li class='captionItem'>Compare &#8211 Peer group comparisons for size, health, availability and response</li>
+            </ul>
+        </div>
+        <a href="#" class="preNavBatch">Previous Nav Batch</a> <a href="#" class="nextNavBatch">Next Nav Batch</a>
+        <div class="slideNav">
+            <ul class="navWrapper cf">
+                <li class="navItem active"><img src="../inc/img/screen-azure-overview.png?version=130"  /> </li>
+                <li class="navItem"><img src="../inc/img/screen-azure-alarm.png?version=130"  /> </li>
+                <li class="navItem"><img src="../inc/img/screen-azure-availability.png?version=130"  /> </li>
+                <li class="navItem"><img src="../inc/img/screen-azure-health.png?version=130"  /> </li>
+                <li class="navItem"><img src="../inc/img/screen-azure-service.png?version=130" /> </li>
+                <li class="navItem"><img src="../inc/img/screen-azure-top-url.png?version=130" /> </li>
+                <li class="navItem"><img src="../inc/img/screen-azure-real-user.png?version=130" /> </li>
+                <li class="navItem"><img src="../inc/img/screen-azure-synthetic-user.png?version=130" /> </li>
+                <li class="navItem"><img src="../inc/img/screen-azure-compare.png?version=130" /> </li>
+            </ul>
+        </div>
+    </div>
+<script>
+$(function(){
+	// screen navigation
+	var iScreenStep = 642;
+	var iCaptionStep = 30;
+	var iNavStep = 688;	//nav item width * num within a screen
+	
+	var screenActiveIndex = 0;
+	var screenSlideNum = $('[name="azure-screenShot"] .slideWrapper .slide').size();
+	
+	//for azure
+	function updateSlider(){
+		//update slide
+		$('[name="azure-screenShot"] .slideWrapper').stop().animate({'left': iScreenStep*(-1)*screenActiveIndex});
+		//update nav
+		$('[name="azure-screenShot"] .slideNav li:eq('+screenActiveIndex+')').addClass('active').siblings().removeClass('active');
+		var navLoop = Math.floor(screenActiveIndex / 5);	         // 5 navs per page
+		var left = navLoop*(-1)*iNavStep;
+		$('[name="azure-screenShot"] .slideNav .navWrapper').animate({'left': left });
+		navLeft = left;
+		//update desc	
+		$('[name="azure-screenShot"] .slideCaption .captionWrapper').stop().animate({'top':iCaptionStep*(-1)*screenActiveIndex});
+	}
+	
+	//nav.click
+	$('[name="azure-screenShot"] .slideNav .navItem').click(function(e) {
+		var iIndex = $('[name="azure-screenShot"] .slideNav .navItem').index(this);
+		screenActiveIndex = iIndex;
+		updateSlider();	
+		return false;
+	});
+	//pre.click
+	$('[name="azure-screenShot"] .preSlide').click(function(e) {
+		if(screenActiveIndex <= 0) return false;
+		screenActiveIndex = (screenActiveIndex-1+screenSlideNum)%screenSlideNum;
+		updateSlider();
+		return false;
+	});
+	//next.click
+	$('[name="azure-screenShot"] .nextSlide').click(function(e) {
+		if(screenActiveIndex >= (screenSlideNum-1)) return false;
+		screenActiveIndex = (screenActiveIndex+1)%screenSlideNum;
+		updateSlider();
+		return false;
+	});
+	
+	//pre nav batch click
+	var navLeft = 0;
+	$('[name="azure-screenShot"] .preNavBatch').click(function(e) {
+        //navwrapper left change
+		if(navLeft >=0) return false;
+		var left = navLeft + iNavStep;
+		$('[name="azure-screenShot"] .navWrapper').stop().animate({'left': left});
+		navLeft = left;
+		return false;
+    });
+	//next nav batch click
+	$('[name="azure-screenShot"] .nextNavBatch').click(function(e) {
+		var totalNavLength = screenSlideNum*140;	//140=navItem width + 12 margin
+		if((Math.abs(navLeft) + iNavStep) > totalNavLength ) return false;
+		var left = (navLeft - iNavStep);
+		$('[name="azure-screenShot"] .navWrapper').stop().animate({'left': left});
+		navLeft = left;
+		return false;
+    });
+});
+</script>

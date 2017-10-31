@@ -1,0 +1,103 @@
+<img class="closeLayerImg" title="Close" alt="Close" src="../inc/img/icon-close.png?version=130">
+    <h2 class="popTitle">Screen Shots </h2>
+    <div class="popContentWrapper"> <a href="#" class="preSlide">Previous</a> <a href="#" class="nextSlide">Next</a>
+        <div class="viewport">
+            <ul class="slideWrapper">
+                <li class="slide"><img src="../inc/img/screen-website-summary.png?version=130" /></li>
+                <li class="slide"><img src="../inc/img/screen-website-location.png?version=130" /></li>
+                <li class="slide"><img src="../inc/img/screen-website-response-detail.png?version=130" /></li>
+                <li class="slide"><img src="../inc/img/screen-website-config.png?version=130" /></li>
+                <li class="slide"><img src="../inc/img/screen-website-report1.png?version=130" /></li>
+                <li class="slide"><img src="../inc/img/screen-website-report2.png?version=130" /></li>
+            </ul>
+        </div>
+        <div class="slideCaption">
+            <ul class='captionWrapper'>
+                <li class='captionItem'>Web Site Summary &#8211 overall availability and response for multiple URLs associated with the site</li>
+                <li class='captionItem'>Web Site Response Summary &#8211 availability and response from different locations for a given URL</li>
+                <li class='captionItem'>Response Time Detail &#8211 Response time breakdown, DNS look-up, Server Connection, Page Fetch</li>
+                <li class='captionItem'>Configuration &#8211 adjusting threshold values and setting notification defaults</li>
+                <li class='captionItem'>Reporting Site Summary &#8211 availability and response by URL</li>
+                <li class='captionItem'>Reporting Site Summary &#8211 availability and response time breakdown</li>
+            </ul>
+        </div>
+        <a href="#" class="preNavBatch">Previous Nav Batch</a> <a href="#" class="nextNavBatch">Next Nav Batch</a>
+        <div class="slideNav">
+            <ul class="navWrapper cf">
+                <li class="navItem active"><img src="../inc/img/screen-website-summary.png?version=130" /></li>
+                <li class="navItem"><img src="../inc/img/screen-website-location.png?version=130" /></li>
+                <li class="navItem"><img src="../inc/img/screen-website-response-detail.png?version=130" /></li>
+                <li class="navItem"><img src="../inc/img/screen-website-config.png?version=130" /></li>
+                <li class="navItem"><img src="../inc/img/screen-website-report1.png?version=130" /></li>
+                <li class="navItem"><img src="../inc/img/screen-website-report2.png?version=130" /></li>
+            </ul>
+        </div>
+    </div>
+<script>
+$(function(){
+	//screen navigation
+	var iScreenStep = 642;
+	var iCaptionStep = 30;
+	var iNavStep = 688;	//nav item width * num within a screen
+	
+	
+	var screenActiveIndex3 = 0;
+	var screenSlideNum3 = $('[name="website-screenShot"] .slideWrapper .slide').size();
+	
+	//for website
+	function updateSlider3(){
+		//update slide
+		$('[name="website-screenShot"] .slideWrapper').stop().animate({'left': iScreenStep*(-1)*screenActiveIndex3});
+		//update nav
+		$('[name="website-screenShot"] .slideNav li:eq('+screenActiveIndex3+')').addClass('active').siblings().removeClass('active');
+		var navLoop = Math.floor(screenActiveIndex3 / 5);	         // 5 navs per page
+		var left = navLoop*(-1)*iNavStep;
+		$('[name="website-screenShot"] .slideNav .navWrapper').animate({'left': left });
+		navLeft3 = left;
+		//update desc	
+		$('[name="website-screenShot"] .slideCaption .captionWrapper').stop().animate({'top':iCaptionStep*(-1)*screenActiveIndex3});
+	}
+	
+	//nav.click
+	$('[name="website-screenShot"] .slideNav .navItem').click(function(e) {
+		var iIndex = $('[name="website-screenShot"] .slideNav .navItem').index(this);
+		screenActiveIndex3 = iIndex;
+		updateSlider3();	
+		return false;
+	});
+	//pre.click
+	$('[name="website-screenShot"] .preSlide').click(function(e) {
+		if(screenActiveIndex3 <= 0) return false;
+		screenActiveIndex3 = (screenActiveIndex3-1+screenSlideNum3)%screenSlideNum3;
+		updateSlider3();
+		return false;
+	});
+	//next.click
+	$('[name="website-screenShot"] .nextSlide').click(function(e) {
+		if(screenActiveIndex3 >= (screenSlideNum3-1)) return false;
+		screenActiveIndex3 = (screenActiveIndex3+1)%screenSlideNum3;
+		updateSlider3();
+		return false;
+	});
+	
+	//pre nav batch click
+	var navLeft3 = 0;
+	$('[name="website-screenShot"] .preNavBatch').click(function(e) {
+	    //navwrapper left change
+		if(navLeft3 >=0) return false;
+		var left = navLeft3 + iNavStep;		
+		$('[name="website-screenShot"] .navWrapper').stop().animate({'left': left});
+		navLeft3 = left;
+		return false;
+	});
+	//next nav batch click
+	$('[name="website-screenShot"] .nextNavBatch').click(function(e) {
+		var totalNavLength = screenSlideNum3*140;	//140=navItem width + 12 margin
+		if((Math.abs(navLeft3) + iNavStep) > totalNavLength ) return false;
+		var left = (navLeft3 - iNavStep);
+		$('[name="website-screenShot"] .navWrapper').stop().animate({'left': left});
+		navLeft3 = left;
+		return false;
+	});
+});
+</script>

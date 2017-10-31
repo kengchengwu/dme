@@ -1,0 +1,55 @@
+
+/**********************************************************
+					global.css
+***********************************************************/
+/* 
+	Date:			2013-05-24
+	Description:	Lib for all sites
+	
+*/
+
+/* Common used setting */
+.left { float: left; }
+.right { float: right; }
+
+.cb { clear: both; }
+.overflow { overflow: auto; *zoom: 1;}
+.cf { *zoom: 1; }
+.cf:after { 
+	content: '';
+	clear: both;
+	overflow: hidden;
+	height: 0;
+	display: block;
+}
+.table { display: table-cell; }
+
+.hide { display: none; }
+.strong { font-weight: bold; }
+
+/* margin setting to adjust element position*/
+.m10 { margin: 10px; }
+	.mt10 { margin-top: 10px; }
+	.mb10 { margin-bottom: 10px; }
+	.ml10 { margin-left: 10px; }
+	.mr10 { margin-right: 10px; }
+.m20 { margin: 20px; }
+	.mt20 { margin-top: 20px; }
+	.mb20 { margin-bottom: 20px; }
+	.ml20 { margin-left: 20px; }
+	.mr20 { margin-right: 20px; }
+.m30 { margin: 30px; }
+	.mt30 { margin-top: 30px; }
+	.mb30 { margin-bottom: 30px; }
+	.ml30 { margin-left: 30px; }
+	.mr30 { margin-right: 30px; }
+.m50 { margin: 50px; }
+	.mt50 { margin-top: 50px; }
+	.mb50 { margin-bottom: 50px; }
+	.ml50 { margin-left: 50px; }
+	.mr50 { margin-right: 50px; }
+.m100 { margin: 100px; }
+	.mt100 { margin-top: 100px; }
+	.mb100 { margin-bottom: 100px; }
+	.ml100 { margin-left: 100px; }
+	.mr100 { margin-right: 100px; }

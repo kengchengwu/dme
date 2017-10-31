@@ -1,0 +1,58 @@
+/**
+* Copyright 2013 Dell Inc.
+* ALL RIGHTS RESERVED.
+*
+* This software is the confidential and proprietary information of
+* Dell Inc. ("Confidential Information").  You shall not
+* disclose such Confidential Information and shall use it only in
+* accordance with the terms of the license agreement you entered
+* into with Dell Inc.
+*
+* DELL INC. MAKES NO REPRESENTATIONS OR WARRANTIES
+* ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+*  PARTICULAR PURPOSE, OR NON-INFRINGEMENT. DELL SHALL
+* NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE
+* AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
+* THIS SOFTWARE OR ITS DERIVATIVES.
+**/
+
+* {	padding: 0;	margin: 0; }
+html, body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #404040;
+	background:#F2F7F2;
+}
+a {	text-decoration: underline;	color: #336699; }
+	a:hover { color: #ec6a00; }
+	a img {	border: 0; }
+	
+.mailContentWrapper {
+	border-collapse: collapse;
+	width: 650px;
+	border: 1px solid #aaa;
+	background: #fff;
+}
+	#logo {	margin:18px; }
+	#mailContent { margin: 20px; }
+		#mailContent p { line-height: 20px;	margin-bottom:20px; }
+		#unsubscribe { color: #999; }
+			#unsubscribe a { font-style: italic; color: #999; }
+		
+	#signature { margin-top: 20px; }
+		#signature p { margin-bottom: 0;}
+		
+.dataTable { width: 100%; border-collapse: collapse;  }
+	.dataTable th { background: #8ABCDE; color: #fff; height: 25px; line-height: 25px; border-right: 1px solid #fff;}
+	.dataTable td { padding: 5px 10px; border-right: 1px solid #fff; }
+	.dataTable .alt { background: #f0f0f0; }
+
+.ellipsis {
+	display: block;
+	width: 340px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

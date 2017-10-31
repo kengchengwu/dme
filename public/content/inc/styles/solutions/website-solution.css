@@ -1,0 +1,42 @@
+
+/**********************************************************
+					website-solution.css
+***********************************************************/
+/**
+* Copyright 2013 Dell Inc.
+* ALL RIGHTS RESERVED.
+*
+* This software is the confidential and proprietary information of
+* Dell Inc. ("Confidential Information").  You shall not
+* disclose such Confidential Information and shall use it only in
+* accordance with the terms of the license agreement you entered
+* into with Dell Inc.
+*
+* DELL INC. MAKES NO REPRESENTATIONS OR WARRANTIES
+* ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+*  PARTICULAR PURPOSE, OR NON-INFRINGEMENT. DELL SHALL
+* NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE
+* AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
+* THIS SOFTWARE OR ITS DERIVATIVES.
+**/
+
+
+#scenario-tabs li{display:none;}
+#scenario-contents .stage-set {margin-top:0;}
+
+/* feature */
+#web-site-availability-scenario .stage-2 .feature{top: 136px;left: 257px;width: 550px;}
+#web-site-availability-scenario .stage-3 .feature{top: 161px;left: 676px;width: 245px;}
+#web-site-availability-scenario .stage-4 .feature{top: 112px;left: 100px;width: 331px;}
+#web-site-availability-scenario .stage-5 .feature{top: -175px;left: 219px;width: 600px;}
+#web-site-availability-scenario .stage-6 .feature{top: 56px;left: 569px;width: 315px;}
+#web-site-availability-scenario .stage-7 .feature{top: -142px;left: 72px;width: 400px;}
+#web-site-availability-scenario .stage-8 .feature{top: -118px;left: 259px;width: 596px;}
+
+#scenario-contents .stage-description .tv-screen{top: 23px;left: 267px;}
+
+#web-site-availability-scenario .stage-7 .daily-report{position: absolute;top: 109px;left: 179px;}
+
+

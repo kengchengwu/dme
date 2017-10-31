@@ -1,0 +1,112 @@
+/**
+* Copyright 2013 Dell Inc.
+* ALL RIGHTS RESERVED.
+*
+* This software is the confidential and proprietary information of
+* Dell Inc. ("Confidential Information").  You shall not
+* disclose such Confidential Information and shall use it only in
+* accordance with the terms of the license agreement you entered
+* into with Dell Inc.
+*
+* DELL INC. MAKES NO REPRESENTATIONS OR WARRANTIES
+* ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+*  PARTICULAR PURPOSE, OR NON-INFRINGEMENT. DELL SHALL
+* NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE
+* AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
+* THIS SOFTWARE OR ITS DERIVATIVES.
+**/
+
+
+/* This style covers
+	1. page header for app pages
+	2. downtime notification
+	3. in progress indicator
+	
+	Last Updated: 2013-01-29
+*/
+#wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -159px; }
+/* 1. App page header setting, to include dashboard with iFrame */
+header{ height: 60px;background: #1B1F22;}
+    header a { color: #fff; }
+.headerContainer{width: auto;margin:0 30px;}
+	#logo { line-height: 40px;}
+	.hdActionBtn {background: url(../img/btn-header-app.png?version=131) no-repeat; width: 95px; height:29px; border-radius: 0;}
+	.loggedInfo{margin-top: -18px; font-size: 13px;}
+
+.dbNav {float: right; margin-top: 10px; clear: right;  font-size: 13px;}
+
+	.moduleSwitch, .engineSwitch{ float: left; height: 24px; background: url(../img/bg-header-switch.png?version=131) repeat-x; border: 1px solid #bbb; border-radius: 5px; color: #282828; }
+	.dbNav span{float: left; margin: 0 20px; line-height: 26px;}
+		.moduleSwitch li{float: left; display: inline-block; padding-right: 1px;  background: url(../img/img-header-switch-separator.png?version=131) no-repeat 101% center;  position:relative;}
+		.moduleSwitch li:first-child{padding: 0 2px; height:24px; }
+			.dbNav .landingLink{display: inline-block; width: 14px; background: url(../img/icon-home.png?version=131) no-repeat center center; text-indent: -9999px; height: 24px; margin: 0;}
+			.dbNav #defaultModuleLink {background: url(../img/icon-setting.png?version=131) no-repeat center center; text-indent: -9999px; width: 16px; margin: 0 20px 0 5px; float: left;}
+			.dbNav li:first-child:hover .landingLink{background: url(../img/icon-home-highlight.png?version=130) no-repeat center center;}	
+		.moduleSwitch li:last-child{background: none; padding-right: 2px;}
+			.moduleSwitch li a{ display: inline-block; padding: 0 15px; color: #282828; line-height: 24px; text-decoration: none; }
+			.moduleSwitch li a:hover{ text-decoration: underline; }
+			.moduleSwitch li a.active{ background: url(../img/bg-db-nav-highlight.png?version=131) repeat-x;}
+			.moduleSwitch li img.star { display: none;position: absolute; top: -6px; right: 2px; }
+			.moduleSwitch li.default img.star { display: block;  }
+	
+	.engineSwitch{ padding: 0 30px; width: 105px; line-height: 24px; cursor: pointer; position: relative; text-align: center}
+		.engineSwitch img{position: relative; top: 10px;}
+		.engineList {  position: absolute; right: 0; top: 25px; width: 160px; z-index: 10;
+					background: -moz-linear-gradient(top, #fff, #E3EFFD);	
+					background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#E3EFFD)); 
+					background: #fff;
+					border: 2px solid #77A0D6; box-shadow: 2px 2px 10px #ccc; display: none;}
+			.engineList li{border-bottom: 1px solid #B5CCEB;}
+				.engineList li a{color: #282828; padding: 10px; display: block; text-decoration: none; }
+				.engineList li a:hover { text-decoration: underline; }
+		.engineSwitch:hover .engineList{display: block;}
+/* use default checkbox and radio setting for IE8/IE9/IE10 */
+	@media screen\0 {
+		.engineSwitch{margin-top:-40px; float: left; height: 24px; background: url(../img/bg-header-switch.png?version=131) repeat-x; border: 1px solid #bbb; border-radius: 5px; color: #282828; }
+	}
+
+/* 2. Downtime notification */		
+.contentContainer { width: 98%; }
+
+.downtimeNoti { 
+	width: 500px; margin: 6% auto auto; 
+	border: 10px solid #444; border-radius: 20px; 
+	background: url(../img/icon-maintenance.png?version=131) no-repeat 50px 50px; 
+	padding: 50px 50px 50px 210px; 
+	box-shadow: 2px 3px 7px #aaa;
+}
+	.downtimeNoti h3 { font-size: 18px; font-weight: bold; margin-bottom: 16px; line-height: 24px; }
+	
+
+
+/* 3. In progress indicator before Dashboard is ready*/
+#content.masked { background: #ddd; }
+			.loaderBox { 
+				width: 500px;
+				margin: 0 auto; padding: 40px 20px 40px 0;
+				border: 10px solid #fff; border-radius: 14px; border-radius: 0\0/;
+				color: #fff;
+				background: #000;           
+			    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#383C40', endColorstr='black');     
+			    background: -webkit-gradient(linear, 0 0, 0 100%, from(#383C40), color-stop(60%, #151A1E), to(black));     
+	 		    background: -moz-linear-gradient(top,  #383C40,  #151A1E 60%, black);     
+			}
+				.loader { width: 150px; display: table-cell; vertical-align: middle; text-align: center; position: relative; }
+					.loadingPercent { 
+						position: absolute; 
+						left: 57px; top: 41px;  
+						color: #0085c3; font-size: 1.6em; }
+				@-moz-document url-prefix() {		
+					.loadingPercent { top: 81px; }
+				}
+				
+				.loadingDesc { display: table-cell; height: 100px; padding-left: 40px; background: url(../img/bg-loader-separator.png?version=131) no-repeat left center; }
+					.loadingDesc h4 { font-size: 1.8em; line-height: 1.8em; font-weight: normal; margin-bottom: 0.6em; }
+			
+			.shadow {
+				-moz-box-shadow: 2px 2px 10px #000;
+				-webkit-box-shadow: 2px 2px 10px #000;
+				box-shadow: 2px 2px 10px #000;
+			}

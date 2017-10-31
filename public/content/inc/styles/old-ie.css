@@ -1,0 +1,19 @@
+/* 
+	styles for browser older than IE8 (including IE8)
+	Created: 2013-06-09
+ */
+
+input[type='checkbox'], input[type='radio'] { 
+	display: inline;
+	border: none;
+	vertical-align: -2px;
+	padding: 0;
+}
+input[type='checkbox']+label, input[type='radio']+label {			
+	padding-left: 6px;
+}
+	input[type='checkbox']+label { background: none; }		
+	input[type='checkbox']:checked+label { background: none; }
+	
+	input[type='radio']+label { background: none; }
+	input[type='radio']:checked+label, input[type='radio'].checked+label { background: none; }

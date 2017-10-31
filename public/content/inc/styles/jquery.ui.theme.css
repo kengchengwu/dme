@@ -1,0 +1,31 @@
+/*
+ * jQuery UI CSS Framework 1.8.17
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/
+ */
+
+
+/* Component containers
+----------------------------------*/
+/* slider bg setting */
+#num-slider.ui-widget-content,
+#fre-slider.ui-widget-content { background: #F4F4F4; cursor: pointer; }
+
+/* slider selction bar bg setting*/
+#num-slider .ui-widget-header,
+#fre-slider .ui-widget-header { background: #004482;}
+
+/* Interaction states
+----------------------------------*/
+/* slider indicator setting*/
+#num-slider .ui-state-default, #fre-slider .ui-state-default { background: url(../img/slider-indicator.png) no-repeat; width: 50px; height: 72px; cursor: pointer; margin-left: -24px; line-height: 36px; color: #024282; }
+
+#num-slider .ui-state-hover, #fre-slider .ui-state-hover,
+#num-slider .ui-state-active, #fre-slider .ui-state-active,
+#num-slider .ui-state-focus, #fre-slider .ui-state-focus { font-weight: bold; border-image: none; }

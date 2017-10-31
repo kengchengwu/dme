@@ -1,0 +1,107 @@
+
+/**********************************************************
+					cam-solution.css
+***********************************************************/
+/**
+* Copyright 2013 Dell Inc.
+* ALL RIGHTS RESERVED.
+*
+* This software is the confidential and proprietary information of
+* Dell Inc. ("Confidential Information").  You shall not
+* disclose such Confidential Information and shall use it only in
+* accordance with the terms of the license agreement you entered
+* into with Dell Inc.
+*
+* DELL INC. MAKES NO REPRESENTATIONS OR WARRANTIES
+* ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER EXPRESS
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+* WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+*  PARTICULAR PURPOSE, OR NON-INFRINGEMENT. DELL SHALL
+* NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE
+* AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
+* THIS SOFTWARE OR ITS DERIVATIVES.
+**/
+
+
+/* overview vedio */
+
+.overview.article .article-vedios{float:left;padding-left:60px;}
+.overview.article .article-vedios li{cursor:pointer;width:155px;height:125px;text-align:center;margin-top: 25px;position: relative;}
+.overview.article .article-vedios li:first-child{margin-top: 0;}
+.overview.article .article-vedios li .vedio{width: 146px;height: 82px;background: #FFFFFF;padding: 3px;border: 1px solid #C6C6C6;margin-bottom:5px;}
+.overview.article .article-vedios li .play{position: absolute;top: 25px;left: 59px;}
+.overview.article .article-vedios li .play-hover{position: absolute;top: 25px;left: 59px;display:none;}
+.overview.article .article-vedios li:hover .play-hover{display:block;}
+.overview.article .article-vedios li:hover .play{display:none;}
+
+/* water */
+/* #cam-end-user-scenario .water{background:#71C6C1 !important;}
+#cam-infrastructure-scenario .water{background:#E2B217 !important;} */
+
+/* cam-end-user-scenario */
+
+/* feature */
+#cam-end-user-scenario .stage-2 .feature{top:0;left:0;width:470px;}
+#cam-end-user-scenario .stage-3 .feature{top:0;left:451px;width:548px;}
+#cam-end-user-scenario .stage-4 .feature{top: -203px;left: 45px;width: 417px;}
+#cam-end-user-scenario .stage-5 .feature{top:61px;left:665px;width:318px;}
+#cam-end-user-scenario .stage-6 .feature{top:0;left:475px;width:510px;}
+#cam-end-user-scenario .stage-7 .feature.feature1{top:-168px;left:52px;width:674px;}
+#cam-end-user-scenario .stage-7 .feature.feature2{top:804px;left:606px;width:375px;}
+/* stage 2 */
+#cam-end-user-scenario .stage-2 .availability-status{position:absolute;top:164px;left:763px;}
+#cam-end-user-scenario .stage-2 .availability-status.normal{display:none;}
+#cam-end-user-scenario .stage-2 .availability-by-url{position:absolute;z-index:-1;top:361px;left:57px;width:206.4px;height:194.4px;}
+/* stage 3 */
+#cam-end-user-scenario .stage-3 .response-time{display:none;position:absolute;}
+#cam-end-user-scenario .stage-3 .response-time span{position: absolute;top: 3px;left: 7px;color:#fff;}
+#cam-end-user-scenario .stage-3 .min.response-time{top: 69px;left: 189px;}
+#cam-end-user-scenario .stage-3 .max.response-time{top: 50px;left: 279px;}
+/* stage 4 */
+#cam-end-user-scenario .stage-4 .china-location{position: absolute;top: 0;left: 502px;display:none;}
+#cam-end-user-scenario .stage-4 .cursor{position:absolute;top:316px;left:569px;}
+#cam-end-user-scenario .stage-4 .pointer{position:absolute;display:none;top:126px;left:316px;}
+/* stage 5 */
+#cam-end-user-scenario .stage-5 .browser-statistic{position:absolute;top:1px;left:54px;height:471px;width:569px;overflow:hidden;}
+#cam-end-user-scenario .stage-5 .browser-statistic img{position:absolute;top:0;left:-15px;}
+/* stage 6 */
+#cam-end-user-scenario .stage-6 .qos{position:absolute;bottom: 366px;width: 59px;height: 39px;}
+#cam-end-user-scenario .stage-6 .qos .pillar{position:absolute;left:0;bottom: 0;width:100%;height:0;}
+#cam-end-user-scenario .stage-6 .qos span{position: relative;top: -20px;left: 20px;}
+#cam-end-user-scenario .stage-6 .less-4sec {left:95px;}
+#cam-end-user-scenario .stage-6 .less-4sec .pillar{background: #a6e283;border: 1px solid #749e5b;}
+#cam-end-user-scenario .stage-6 .between-4and8sec{left:170px;}
+#cam-end-user-scenario .stage-6 .between-4and8sec .pillar{background: #fea042;border: 1px solid #b1702e;}
+#cam-end-user-scenario .stage-6 .more-8sec{left:245px;}
+#cam-end-user-scenario .stage-6 .more-8sec .pillar{background: #fd6965;border: 1px solid #b14946;}
+#cam-end-user-scenario .stage-6 .errors{left: 320px;}
+#cam-end-user-scenario .stage-6 .errors .pillar{background: #aaaaaa;border: 1px solid #2c2c2c;}
+/* stage 7 */
+#cam-end-user-scenario .stage-7 .url-mask{position: absolute;top:0;left:50px;height:0;width:895px;background: #45474A;zoom:0;filter:alpha(opacity=30);-moz-opacity:0.3;opacity: 0.3;}		
+#cam-end-user-scenario .stage-7 .url-details{position:absolute;width:0;height:0;top:100px;left:150px;display:none;}
+
+
+/* cam-infrastructure-scenario */
+
+/* feature */
+#cam-infrastructure-scenario .stage-2 .feature{top:551px;left:411px;width:470px;}
+
+/* cam-core-resources-scenario */
+#cam-core-resources-scenario .stage-2 .feature{top:-185px;left:144px;width:550px;}
+#cam-core-resources-scenario .stage-3 .feature1{top:100px;left:428px;width:442px;}
+#cam-core-resources-scenario .stage-3 .feature2{top:1000px;left:182px;width:436px;}
+
+#cam-core-resources-scenario .stage-3 .email{position: absolute;width: 583px;height: 288px;top: 1320px;left: 200px;}
+#cam-core-resources-scenario .stage-3 .email p{margin-bottom:25px;font-size:14px;}
+/* cam-database-scenario */
+#cam-database-scenario .stage-2 .feature{top: -228px;left: 99px;width: 550px;}
+#cam-database-scenario .stage-3 .feature{top: -115px;left: 390px;width: 550px;}
+#cam-database-scenario .stage-4 .feature{top: -142px;left: 62px;width: 550px;}
+#cam-database-scenario .stage-5 .feature{top: -130px;left: 400px;width: 550px;}
+
+/* cam-win8-scenario */
+#cam-win8-scenario .stage-2 .feature{top: -200px;left: 100px;width: 629px;}
+#cam-win8-scenario .stage-3 .feature{top: -177px;left: 106px;width: 306px;}
+#cam-win8-scenario .stage-4 .feature1{top: -172px;left: 472px;width: 364px;}
+#cam-win8-scenario .stage-4 .feature2{top: 630px;left: 581px;width: 288px;}
+
